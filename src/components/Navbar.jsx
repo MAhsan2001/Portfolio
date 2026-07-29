@@ -100,22 +100,22 @@ const Navbar = () => {
 
       {/* Mobile Slide-Down Menu */}
       <div 
-        className={`md:hidden absolute top-full left-0 w-full transition-all duration-300 overflow-hidden ${
-          isOpen ? 'max-h-96 py-4 opacity-100 bg-[#ff2a2a] shadow-2xl' : 'max-h-0 opacity-0 bg-transparent'
+        className={`md:hidden absolute top-full left-0 w-full transition-all duration-500 overflow-hidden ${
+          isOpen ? 'max-h-[600px] py-6 opacity-100 bg-[#ff2a2a] shadow-2xl border-b border-red-700' : 'max-h-0 opacity-0 bg-transparent'
         }`}
       >
-        <div className="flex flex-col px-6 space-y-4">
+        <div className="flex flex-col px-6 space-y-3">
           {navLinks.map((link) => (
             <a 
               key={link} 
               href={`#${link.toLowerCase()}`}
               onClick={() => setIsOpen(false)}
-              className="text-white hover:text-black font-bold text-lg border-b border-white/20 pb-2 transition-colors"
+              className="text-white hover:text-black font-bold text-base border-b border-white/20 pb-2 transition-colors"
             >
               {link}
             </a>
           ))}
-          <div className="pt-4 pb-2">
+          <div className="pt-2 pb-4">
              <a 
                href={hireMeMailto}
                onClick={() => setIsOpen(false)} 
